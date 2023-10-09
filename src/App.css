@@ -1,38 +1,76 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Header Css*/
+.header{
+  font-size: 30px;
+  font-weight: 800;
+  border: 0.2px solid 5px;
+  text-align: center;
+  box-shadow: 5px 10px 8px 10px #888 ;
+  color:whitesmoke;
+  background-color: rgb(46, 6, 6);
+  margin-top: 20px;
+}
+.header-icon{
+  align-items: center;
+  padding: 2px;
+  justify-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Contact Css*/
+.contact{
+  margin: 50px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact-head{
+   font-size: 25px;
+   color: rgb(6, 6, 30);
+   font-weight: 800;
+}
+.contact-form{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  align-items:start;
+  padding: 10px;
+}
+.text{
+  padding:3px 2px;
+  margin-top: 4px;
+}
+
+.btn{
+  border-color: cadetblue;
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #8e0625;
+}
+
+/*ContactList Css*/
+.list{
+  font-size:20px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 12px; 
+  display: flex;
+  justify-content:space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head{
+  font-size: 25px;
+  font-weight: 800;
+  display: flex;
+  align-items: flex-start;
+  color: rgb(2, 2, 15);
+  margin-left: 40px;
 }

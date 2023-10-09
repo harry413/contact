@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import react,{useState} from "react";
 import './App.css';
 
+
+import  Header  from './components/Header';
+import AddContact from './components/AddContact';
+import ContactList from './components/ContactList';
+
 function App() {
+
+  const [contact, setContact] = useState([]);
+
+   const addContact = (data) =>{
+      setContact([...contact, data])
+   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+       <Header/>
+       <div>
+        <AddContact addContact={addContact}/>
+        <ContactList contact={contact}/>
+       </div>
     </div>
   );
 }
