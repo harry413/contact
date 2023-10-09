@@ -5,10 +5,10 @@ const AddContact = ({addContact}) => {
       const [contactData, setContactData] = useState({name: "", email:""}); 
 
      const handelChange = (e) => {
-        if(e.target.name === "name"){
-          setContactData({...contactData, name:e.target.value});
+        if(e.target?.name === "name"){
+          setContactData({...contactData, name:e.target?.value});
         }else{
-          setContactData({...contactData, email:e.target.value});
+          setContactData({...contactData, email:e.target?.value});
         }
      }
 
@@ -25,9 +25,9 @@ const AddContact = ({addContact}) => {
         <div className='contact-head'>Add contact</div>
         <form className='contact-form'>
           <label>Name:</label>
-          <input name='name' placeholder='enter name' type='text' className='text' value={contactData.name} onChange={handelChange}/>
+          <input name='name' placeholder='enter name' type='text' className='text' value={contactData?.name} onChange={handelChange}/>
           <label>Email:</label>
-          <input name='email' placeholder='enter email' type='email'  className='email' value={contactData.email} onChange={handelChange}/>
+          <input name='email' placeholder='enter email' type='email'  className='email' value={contactData?.email} onChange={handelChange}/>
         </form>
         <button className='btn' onClick={handleAdd}>add contact</button>
     </div>
